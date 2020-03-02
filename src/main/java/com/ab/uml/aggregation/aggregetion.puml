@@ -1,0 +1,14 @@
+@startuml
+class Computer{
+- Mouse mouse
+- Monitor monitor
+}
+
+class Monitor{
+}
+class Mouse{
+}
+Computer o-- monitor : 聚合
+Computer o-- mouse : 聚合
+note right of Computer:
+@enduml整体和部分是可以分离的

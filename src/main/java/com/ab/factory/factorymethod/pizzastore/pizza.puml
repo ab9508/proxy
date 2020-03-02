@@ -1,0 +1,39 @@
+@startuml
+class Pizza{
+prepare(): void
+bake(): void
+cut(): void
+box(): void
+
+}
+
+class BJCheessPizza {
+}
+class BJPepperPizza{
+}
+class LDCheessPizza{
+}
+class LDPepperPizza{
+}
+
+class OrderPizza{
+{abstract} createPizza(): Pizza
+}
+
+class LDOrderPizza{
+}
+class BJOrderPizza{
+}
+
+Pizza <|-- BJCheessPizza
+Pizza <|-- BJPepperPizza
+Pizza <|-- LDCheessPizza
+Pizza <|-- LDPepperPizza
+LDCheessPizza <.. LDOrderPizza
+LDPepperPizza <.. LDOrderPizza
+BJCheessPizza <.. BJOrderPizza
+BJPepperPizza <.. BJOrderPizza
+OrderPizza <|-- BJOrderPizza
+OrderPizza <|-- LDOrderPizza
+
+@enduml

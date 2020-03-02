@@ -1,0 +1,12 @@
+@startuml
+class Person{
+- card: IDCard
+- head: Head
+}
+class IDCard{
+}
+class Head{
+}
+Person *-- Head: 组合关系，不可分开
+Person o-- IDCard: 聚合关系，可以分开
+@enduml

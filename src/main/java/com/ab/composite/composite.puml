@@ -1,0 +1,17 @@
+@startuml
+class OrganizationComponent{
+add(): void
+remove(): void
+print(): void
+}
+class University
+class Collega
+class Department
+class Client
+
+OrganizationComponent <|-- University
+OrganizationComponent <|-- Collega
+OrganizationComponent <|-- Department
+OrganizationComponent <.. Client
+
+@enduml

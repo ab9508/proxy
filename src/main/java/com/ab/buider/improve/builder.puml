@@ -1,0 +1,25 @@
+@startuml
+class House{
+}
+class HouseBuilder{
+house: House
+buildBisic(): void
+buildWalls(): void
+roofed():void
+build(): House
+}
+class CommonHouse
+class HighBuilding
+interface HouseDirector
+class Client
+
+HouseBuilder *-- House
+HouseBuilder <|-- CommonHouse
+HouseBuilder <|-- HighBuilding
+HouseDirector o-- HouseBuilder
+HouseDirector <.. Client
+CommonHouse <.. Client
+HighBuilding <.. Client
+
+
+@enduml

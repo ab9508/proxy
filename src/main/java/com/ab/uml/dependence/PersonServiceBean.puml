@@ -1,0 +1,26 @@
+@startuml
+class PersonServiceBean{
+    - personDao: PersonDao
+    + save(person: Person): void
+    + getIDCard(personId: Integer): IDCard
+    + modify(): void
+
+}
+
+class PersonDao{
+}
+class IDCard{
+}
+class Person{
+}
+class Department{
+}
+
+PersonServiceBean <.. PersonDao : 依赖
+PersonServiceBean <.. Person
+PersonServiceBean <.. Department
+PersonServiceBean <.. IDCard
+
+note top of PersonServiceBean: 代码参照PersonServiceBean.java
+
+@enduml

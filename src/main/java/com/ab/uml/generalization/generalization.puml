@@ -1,0 +1,13 @@
+@startuml
+class DaoSuport{
++ save(entity: Object): void
++ delete(id: Object): void
+}
+
+class PersonServiceBean {
+}
+
+DaoSuport <|-- PersonServiceBean : 泛化或者继承
+
+note bottom of PersonServiceBean : 或者 class PersonServiceBean extends DaoSuport{}
+@enduml

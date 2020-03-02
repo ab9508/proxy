@@ -1,0 +1,35 @@
+@startuml
+class person2{
+Integer id
+String name
+void setName(String name)
+String getName()
+
+}
+
+class A extends person2{
+
+}
+@enduml
+
+@startuml
+abstract class Operation{
+String numberA
+String NumberB
+double getResult()
+}
+class OperationAdd
+class OperationDiv
+class OperationMul
+class OperationSub
+class OperationFactory{
+ {static} Operation create()
+ }
+ class Main
+ Main..>OperationFactory
+OperationFactory ..> Operation
+Operation<|--OperationAdd
+Operation<|--OperationSub
+Operation<|--OperationMul
+Operation<|--OperationDiv
+@enduml

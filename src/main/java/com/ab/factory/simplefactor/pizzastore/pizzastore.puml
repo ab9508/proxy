@@ -1,0 +1,30 @@
+@startuml
+class Pizza{
+prepare(): void
+bake(): void
+cut(): void
+box(): void
+
+}
+
+class CheessPizza {
+}
+class GreekPizza{
+}
+class OrderPizza{
+}
+class OrderStore{
+}
+class PepperPizza{
+}
+
+Pizza <|-- CheessPizza
+Pizza <|-- GreekPizza
+Pizza <..OrderPizza
+Pizza <|-- PepperPizza
+PepperPizza <.. OrderPizza
+CheessPizza <.. OrderPizza
+GreekPizza <.. OrderPizza
+OrderStore <.. OrderPizza
+note top of Pizza : 常规方法
+@enduml
