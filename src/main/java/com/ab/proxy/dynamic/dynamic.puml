@@ -1,0 +1,19 @@
+@startuml
+interface ITeacherDao{
+teach(): void
+}
+class TeacherDao{
+teach(): void
+}
+class ProxyFactory{
+ProxyFactory()
+getProxyInstance(): Objcet
+}
+class Client
+
+ITeacherDao <|-- TeacherDao
+ProxyFactory <.. Client
+TeacherDao <.. Client
+
+
+@enduml

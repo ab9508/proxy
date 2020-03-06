@@ -1,0 +1,17 @@
+@startuml
+class AbstractClass{
+template(): void
+operation2(): void
+operation3(): void
+operation4(): void
+}
+
+class ConcreteClass
+class Client
+
+AbstractClass <|-- ConcreteClass
+ConcreteClass <.. Client
+
+note top of AbstractClass: template模板方法，\n规定了算法的流程，\noperation234也可以是实现方法；\n如果是抽象方法，就放到子类实现
+
+@enduml

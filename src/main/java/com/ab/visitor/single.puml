@@ -1,0 +1,26 @@
+@startuml
+class Action{
+operation1(): void
+operation2(): void
+}
+class Success
+class Fail
+class Person{
+accept(action: Action): void
+}
+class Man
+class Women
+class ObjectStrture{
+elements: Person
+}
+class Client
+
+Action <|-- Success
+Action <|-- Fail
+Person <|-- Man
+Person <|-- Women
+Action <-- Person
+ObjectStrture o-- Person
+Client ..> Action
+Client ..> ObjectStrture
+@enduml

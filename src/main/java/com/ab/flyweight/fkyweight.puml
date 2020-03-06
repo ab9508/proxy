@@ -1,0 +1,16 @@
+@startuml
+abstract class WeiSite
+class ConcreteWebSite
+class WebSiteFactory
+class Client
+class User
+
+WeiSite <|-- ConcreteWebSite
+WebSiteFactory o-- WeiSite
+Client ..> WebSiteFactory
+Client ..> ConcreteWebSite
+Client ..> User
+ConcreteWebSite ..> User
+
+note top of User: 享元模式的外部状态
+@enduml

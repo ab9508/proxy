@@ -1,0 +1,23 @@
+@startuml
+interface Command{
+execute(): void
+undo(): void
+}
+
+class ConcreteCommand{
+execute(): void
+undo(): void
+}
+
+class Receiver{
+action(): void
+}
+class Invoker
+class Client
+
+Command <|-- ConcreteCommand
+ConcreteCommand o-- Receiver
+Invoker o-- Command
+Invoker <.. Client
+
+@enduml

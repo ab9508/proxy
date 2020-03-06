@@ -1,0 +1,34 @@
+@startuml
+interface Command{
+execute(): void
+undo(): void
+}
+
+class LightOnCommand{
+execute(): void
+undo(): void
+}
+class NoCommand
+note right of NoCommand: 表示空命令,身躯了对空的判断
+
+class LightOffCommand
+class LightReceiver{
+on(): void
+off(): void
+}
+
+class RemoteController{
+onCommands(): Command[]
+offCommands(): Command[]
+}
+
+class Client
+
+Command <|-- LightOffCommand
+Command <|-- LightOnCommand
+LightOffCommand o-- LightReceiver
+LightOnCommand o-- LightReceiver
+RemoteController o-- Command
+Client ..> RemoteController
+
+@enduml

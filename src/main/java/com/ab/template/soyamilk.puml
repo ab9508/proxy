@@ -1,0 +1,18 @@
+@startuml
+abstract class SoyaMilk{
+make(): void
+select(): void
+{abstract} add(): void
+soak(): void
+beat(): void
+}
+class BlackBeanSoyamilk
+class PennutSoyamilk
+class Client
+
+SoyaMilk <|-- BlackBeanSoyamilk
+SoyaMilk <|-- PennutSoyamilk
+BlackBeanSoyamilk <.. Client
+
+note top of SoyaMilk: add添加配料，因为不同的豆浆，配料不同，是抽象方法
+@enduml

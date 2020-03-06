@@ -1,0 +1,27 @@
+@startuml
+class Visitor{
+operation1(): void
+operation2(): void
+}
+class ConcreteVisitor{
+operation1(): void
+operation2(): void
+}
+class Element{
+accept(visitor: Visitor): void
+}
+class ConcreteElement{
+accept(visitor: Visitor): void
+}
+class ObjectStruture{
+element: Element
+}
+class Client
+
+Visitor <|-- ConcreteVisitor
+Visitor <-- Element
+ObjectStruture o-- Element
+Element <|-- ConcreteElement
+Visitor <.. Client
+ObjectStruture <.. Client
+@enduml
