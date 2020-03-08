@@ -1,0 +1,8 @@
+@startuml
+Client ..> Memento
+Client ..> GameRole
+GameRole ..> Memento
+Memento --. Careker
+
+
+@enduml
