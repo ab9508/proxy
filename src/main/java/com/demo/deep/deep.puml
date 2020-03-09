@@ -1,0 +1,15 @@
+@startuml
+interface Process
+class Process01
+class Process02
+class Process03
+class Client
+
+Process <|-- Process01
+Process <|-- Process02
+Process <|-- Process03
+Process <.. Client
+
+
+
+@enduml
